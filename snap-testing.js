@@ -222,7 +222,7 @@
                     for (i in config.exceptions) {
                         var exception = config.exceptions[i];
                         console.log(exception);
-                        $(selector).find('#' + exception.state).click(function () {
+                        $(selector).find('#' + exception.state).off().click(function () {
                             window.open(exception.link);
                         });
                     }
