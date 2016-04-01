@@ -28,7 +28,7 @@
                     stroke: "#eaeaea"
                 });
                 // Create the multiline text elements -- s.multitext format is x-offset, y-offset, text to chop into lines
-                /*var worldMapText = s.multitext(300, 705, 'The State Department\nsets Foreign Rates.\nVisit the State Dept Site >');
+                var worldMapText = s.multitext(300, 705, 'The State Department\nsets Foreign Rates.\nVisit the State Dept Site >');
                 worldMapText.attr({
                     font: "19px Source Sans Pro",
                     'line-height': '1.1',
@@ -46,7 +46,7 @@
                     stroke: 'none',
                     display: 'none',
                     class: 'textBlocks'
-                }); */
+                });
                 var allTextLabels = Snap.selectAll('text');
                 allTextLabels.forEach(function (elem, i) {
                     elem.attr({
