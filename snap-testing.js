@@ -35,9 +35,7 @@
                     fill: '#333',
                     stroke: 'none',
                     display: 'none',
-                    class: 'textBlocks',
-                    class: 'topbox'
-                });
+                }).addClass('textBlocks');
                 var otherStatesText = s.multitext(0, 605, 'The Department of Defense sets rates for\nAlaska, Hawaii, U.S. Territories, and Possessions (OCONUS rates).\nVisit DoD site >');
                 otherStatesText.attr({
                     font: "19px Source Sans Pro",
@@ -45,8 +43,7 @@
                     fill: '#333',
                     stroke: 'none',
                     display: 'none',
-                    class: 'textBlocks'
-                });
+                }).addClass('textBlocks topbox');
                 var allTextLabels = Snap.selectAll('text');
                 allTextLabels.forEach(function (elem, i) {
                     elem.attr({
