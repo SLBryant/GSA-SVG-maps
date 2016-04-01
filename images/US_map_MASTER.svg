@@ -245,33 +245,33 @@
 	l7.8,12l7.2,1l4.6-2l3.6-3.6l-1.6-5.4l-4.2-3.2l-3.2,1.2l-2-2.6l1-1l4.2-0.4l3.6,1.6l3.8,4.8l2,5.8l0.6,4.8l-8.4,3l-7.6,4l-7.8,9
 	l-3.8,3v-2l4.8-3l1-3.6l-1.6-6.2l-5.8,3l-1.6,3l1,4.6l-4.2,2l-5.4-9l-7-8.8l-4.2-3.6l-13,3.8l-10.2,2.2l-41.4,9.2l-1.2-9.8l1.2-21.2
 	l8.6-1.8L1283.4-29.6L1283.4-29.6z"/>
-    <path id="rect3123-5-4" class="statebox" fill="#aaa" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8-71.8h89.2c5.8,0,10.4,4.4,10.4,10v40.2
+    <path id="rect3123-5-4" class="statebox" fill="#c7c8c9" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8-71.8h89.2c5.8,0,10.4,4.4,10.4,10v40.2
 	c0,5.4-4.6,10-10.4,10h-89c-5.8,0-10.4-4.4-10.4-10v-40.2C1396.4-67.4,1401.2-71.8,1406.8-71.8z"/>
 </g>
 <g id="NH" class="state">
     <path d="M1334-49l1.8-2.2l2.2-6.6l-5-1.8l-1-6.2l-7.8-2.2l-0.6-5.4l-14.6-46.8l-9.2-29h-1.8l-1.2,3.2l-1.2-1l-2-2l-3,3.8v10
 	l0.6,11.4l3.8,5.4v8l-7.4,10.2l-5.2,2.2v2.2l2.2,3.6V-75l-1.6,18.4l-0.4,9.6l2,2.6l-0.4,9l-1,3.6l2,1.4l33.6-8.8l4.4-1.2l3.6-5.6
 	L1334-49L1334-49z"/>
-    <path id="rect3123" fill="#aaa" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1170.8-241.6h89.2c5.8,0,10.4,4.4,10.4,10v40.2
+    <path id="rect3123" fill="#c7c8c9" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1170.8-241.6h89.2c5.8,0,10.4,4.4,10.4,10v40.2
 	c0,5.4-4.6,10-10.4,10h-89c-5.8,0-10.4-4.4-10.4-10v-40.2C1160.4-237.2,1165.2-241.6,1170.8-241.6z"></path>
 </g>
 <g id="VT" class="state">
     <path d="M1261.4-25.6l0.6-10.6l-5.6-21.8l-1.2-0.6l-5.8-2.6l1.6-5.8l-1.6-4.2l-5.4-9.2l2-7.8l-1.6-10.4l-4.8-13l-1.6-9.8l52.8-13.4
 	l0.6,11l3.8,5.4v8l-7.4,10.2l-5.2,2.2v2.2l2.6,3l-0.6,16.2l-1.2,18.6l-0.4,11.2l2,2.6l-0.4,9.2l-1,3.4l2,1.4l-14.8,3L1261.4-25.6
 	L1261.4-25.6z"/>
-    <path id="rect3123-6" fill="#aaa" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1040-241.6h89c5.8,0,10.4,4.4,10.4,10v40.2
+    <path id="rect3123-6" fill="#c7c8c9" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1040-241.6h89c5.8,0,10.4,4.4,10.4,10v40.2
 	c0,5.4-4.6,10-10.4,10h-89c-5.8,0-10.4-4.4-10.4-10v-40.2C1029.6-237.2,1034.2-241.6,1040-241.6z"></path>
 </g>
 <g id="RI" class="state">
     <path d="M1320.6,24l-7.4-30l12.6-3.6l4.4,3.8l6.6,8.6l5.4,8.8l-6,3.2l-2.6-0.4l-2.2,3.6l-4.8,3.8L1320.6,24
 	L1320.6,24z"/>
-    <path id="rect3123-5" fill="#aaa" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,2.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
+    <path id="rect3123-5" fill="#c7c8c9" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,2.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
 	c0,5.4-4.6,10-10.4,10h-89c-5.8,0-10.4-4.4-10.4-10V12.2C1396.4,6.6,1401.2,2.2,1406.8,2.2z"/>
 </g>
 <g id="CT" class="state">
     <path d="M1320.6,24l-7.4-29.8l-9.4,1.8l-42.4,9.4l2,6.4l3,14.6l0.4,18l-2.4,4.4l3.8,3.8l8.6-7.8l7.2-6.4l3.8-4.2l1.6,1.2l5.4-3
 	l10.4-2.2L1320.6,24L1320.6,24z"/>
-    <path id="rect3123-63" fill="#aaa" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,76.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
+    <path id="rect3123-63" fill="#c7c8c9" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,76.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
 	c0,5.4-4.6,10-10.4,10h-89c-5.8,0-10.4-4.4-10.4-10V86.2C1396.4,80.6,1401.2,76.2,1406.8,76.2z"/>
 </g>
 <g id="NJ" class="state">
@@ -279,14 +279,14 @@
 	l2,5.2l7.2,4.8l4.8,3.2v1.6l-6,5.4l-3.2,4.6l-3,5.4l-4.6,2.6l-1,3.2l-0.4,2.4l-1.2,5.2l2.2,4.4l6.4,5.8l9.6,4.6l8,1.2l0.4,3l-1.6,2
 	l0.6,5.4h1.6l4.2-4.8l1.6-9.6l5.4-8l6.2-13l2.2-11l-1.2-2.2l-0.4-18.8l-3.2-6.8l-2.2,1.6L1257,80l-1-1l2.2-2l4.2-3.8l0.2-2.2
 	l-0.8-6.8l1.2-5.4l-0.2-4l-5.6-3.6l-10.2-2.4l-8.2-2.8L1231.8,43.2L1231.8,43.2z"/>
-    <path id="rect3123-9" fill="#aaa" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,150.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
+    <path id="rect3123-9" fill="#c7c8c9" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,150.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
 	c0,5.4-4.6,10-10.4,10h-89c-5.8,0-10.4-4.4-10.4-10v-40.2C1396.4,154.6,1401.2,150.2,1406.8,150.2z"/>
 </g>
 <g id="DE" class="state">
     <path stroke-miterlimit="10" d="M1223.8,122.8l0.8-4.2l0.8-3.4l-3.2,0.8l-3.2,1l-4.4,3.6l3.4,10
 	l4.6,11.4l4.2,19.4l3.2,12.6l10-0.4l12.2-2.4l-4.6-14.8l-2,1l-7.2-4.8l-3.6-9.4l-3.8-7.2l-6.2-5.8l-1.8-4.2L1223.8,122.8
 	L1223.8,122.8z"/>
-    <path id="rect3123-4" fill="#aaa" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,224.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
+    <path id="rect3123-4" fill="#c7c8c9" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,224.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
 	c0,5.4-4.6,10-10.4,10h-89c-5.8,0-10.4-4.4-10.4-10v-40.2C1396.4,228.6,1401.2,224.2,1406.8,224.2z"/>
 </g>
 <g id="MD" class="state">
@@ -296,12 +296,12 @@
 	l-0.4-4.2l-2.6-2.6c0,0,3-3.2,3-4.6c0-1.2,1-4.2,1-4.2l3.8-2.6l3.8-3.2l1,2l-3,3.2l-2.6,7.4l0.6,2.2l3.6,0.6l1,11l-4.2,2l0.6,7.2
 	l1-0.4l2.2-3.8l3.2,3.6l-3.2,2.6l-0.6,6.8l5.2,6.8l7.8,1l3.2-1.6l6.4,8.4l2.8,1l13.4-5.6l4-8L1252,171L1252,171z M1220.2,189l2.2,5
 	l0.4,3.6l2.2,3.8c0,0,1.8-1.8,1.8-2.4s-1.4-6.2-1.4-6.2l-1.4-4.6L1220.2,189L1220.2,189z"/>
-    <path id="rect3123-8" fill="#aaa" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,298.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
+    <path id="rect3123-8" fill="#c7c8c9" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,298.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
 	c0,5.4-4.6,10-10.4,10h-89c-5.8,0-10.4-4.4-10.4-10v-40.2C1396.4,302.6,1401.2,298.2,1406.8,298.2z"/>
 </g>
 <g id="DC" class="state">
 	<path stroke="#FFFFFF" stroke-width="1.25" d="M1184.2,167.8l-3.8-3.6l-2.4-1.4l2.8-4l5.8,3.8L1184.2,167.8L1184.2,167.8z"/>
-	<path id="rect3123-1" fill="#aaa" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,372.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
+	<path id="rect3123-1" fill="#c7c8c9" class="statebox" stroke="#FFFFFF" stroke-width="1.25" d="M1406.8,372.2h89.2c5.8,0,10.4,4.4,10.4,10v40.2
 		c0,5.4-4.6,10-10.4,10h-89c-5.8,0-10.4-4.4-10.4-10v-40.2C1396.4,376.6,1401.2,372.2,1406.8,372.2z"/>
 </g>
 </g>
@@ -397,15 +397,15 @@
 <text transform="matrix(1 0 0 1 679.2756 857.4562)" fill="#000" font-family="'Source Sans Pro'" font-weight="700" id="guamLabel" style="display: none;" font-size="34.8642" class="topbox">GUAM</text>
 <g id="topBoxes" style="display: none;">
     <g>
-	   <rect rx="10" ry="10" x="104" y="-402" fill="#aaaaaa" id="american-samoa" width="390" height="60"></rect>
+	   <rect rx="10" ry="10" x="104" y="-402" fill="#c7c8c9" id="AS" width="390" height="60"></rect>
     </g>
     <text transform="matrix(1 0 0 1 139.2334 -358.2612)" fill="#FFFFFF" class="topbox" id="topbox1" font-family="'Source Sans Pro'" font-size="42">AMERICAN SAMOA</text>
     <g>   
-        <rect rx="10" ry="10" id="europe" x="515" y="-402" fill="#aaaaaa" width="190" height="60"></rect>
+        <rect rx="10" ry="10" id="AE" x="515" y="-402" fill="#c7c8c9" width="190" height="60"></rect>
     </g>
     <text transform="matrix(1 0 0 1 537.0225 -358.436)" fill="#FFFFFF" class="topbox" id="topbox2" font-family="'Source Sans Pro'" font-size="42">EUROPE</text>
     <g>
-        <rect rx="10" ry="10" x="730" y="-402" id="east-asia" fill="#aaaaaa" width="250" height="60"></rect>
+        <rect rx="10" ry="10" x="730" y="-402" id="EA" fill="#c7c8c9" width="250" height="60"></rect>
     </g>
     <text transform="matrix(1 0 0 1 764.7471 -358.2612)" fill="#FFFFFF" class="topbox" id="topbox3" font-family="'Source Sans Pro'" font-size="42">EAST ASIA</text>
 </g>

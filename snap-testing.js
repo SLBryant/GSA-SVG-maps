@@ -95,7 +95,7 @@
                     // click functionality to be added underneath this
                     var allGroupLabelBoxes = Snap.selectAll('g > rect');
                     allGroupLabelBoxes.forEach(function (elem, i) {
-                        var topBoxes = ['american-samoa', 'europe', 'east-asia'];
+                        var topBoxes = ['AS', 'AE', 'EA'];
                         elem.hover(function () {
                             this.attr({
                                 fill: '#9bdaf9',
@@ -149,37 +149,60 @@
                     });
                 });
                 // what do the clicks do??? read on!
+                function xCallback(i) {
+                    return function() {
+                        window.open(i);
+                    }
+                }
+                if (config.exceptions) {
+                    var eArray = [];
+                    for (i in config.exceptions) {
+                        var exception = config.exceptions[i];
+                        var state = exception.state,
+                            link = exception.link;
+                        $(selector).find('#' + state).click(xCallback(link));
+                        eArray.push(exception.state);
+                    }
+                }
                 if (config.mapTarget == 'link') {
                     var statePaths = Snap.selectAll('.state')
                     var topBoxPaths = Snap.selectAll('g > rect');
                     statePaths.forEach(function (elem, i) {
                         var id = elem.attr('id');
-                        elem.click(function () {
-                            if (!config.convertStates) {
-                                var stateName = convert_state(id, 'abbrev');
+                        elem.click(function (e) {
+                            if (eArray.indexOf(id) === -1) {
+                                if (!config.convertStates) {
+                                    var stateName = convert_state(id, 'abbrev');
+                                }
+                                if (config.convertStates == 'name') {
+                                    var stateName = convert_state(id, 'name');
+                                }
+                                if (config.convertStates == 'nospaces') {
+                                    var stateName = convert_state(id, 'nospaces');
+                                }
+                                outPutHandler(stateName);
+                            } else {
+                                e.preventDefault();
                             }
-                            if (config.convertStates == 'name') {
-                                var stateName = convert_state(id, 'name');
-                            }
-                            if (config.convertStates == 'nospaces') {
-                                var stateName = convert_state(id, 'nospaces');
-                            }
-                            outPutHandler(stateName);
                         });
                     });
                     topBoxPaths.forEach(function (elem, i) {
                         var id = elem.attr('id');
-                        elem.click(function () {
-                            if (!config.convertStates) {
-                                var stateName = convert_state(id, 'abbrev');
+                        elem.click(function (e) {
+                            if (eArray.indexOf(id) === -1) {
+                                if (!config.convertStates) {
+                                    var stateName = convert_state(id, 'abbrev');
+                                }
+                                if (config.convertStates == 'name') {
+                                    var stateName = convert_state(id, 'name');
+                                }
+                                if (config.convertStates == 'nospaces') {
+                                    var stateName = convert_state(id, 'nospaces');
+                                }
+                                outPutHandler(stateName);
+                            } else {
+                                e.preventDefault();
                             }
-                            if (config.convertStates == 'name') {
-                                var stateName = convert_state(id, 'name');
-                            }
-                            if (config.convertStates == 'nospaces') {
-                                var stateName = convert_state(id, 'nospaces');
-                            }
-                            outPutHandler(stateName);
                         });
                     });
                 }
@@ -189,43 +212,42 @@
                     var topBoxPaths = Snap.selectAll('g > rect');
                     statePaths.forEach(function (elem, i) {
                         var id = elem.attr('id');
-                        elem.click(function () {
-                            if (!config.convertStates) {
-                                var stateName = convert_state(id, 'abbrev');
+                        elem.click(function (e) {
+                            if (eArray.indexOf(id) === -1) {
+                                if (!config.convertStates) {
+                                    var stateName = convert_state(id, 'abbrev');
+                                }
+                                if (config.convertStates == 'name') {
+                                    var stateName = convert_state(id, 'name');
+                                }
+                                if (config.convertStates == 'nospaces') {
+                                    var stateName = convert_state(id, 'nospaces');
+                                }
+                                outPutHandler(stateName);
+                            } else {
+                                e.preventDefault();
                             }
-                            if (config.convertStates == 'name') {
-                                var stateName = convert_state(id, 'name');
-                            }
-                            if (config.convertStates == 'nospaces') {
-                                var stateName = convert_state(id, 'nospaces');
-                            }
-                            outPutHandler(stateName);
                         });
                     });
                     topBoxPaths.forEach(function (elem, i) {
                         var id = elem.attr('id');
-                        elem.click(function () {
-                            if (!config.convertStates) {
-                                var stateName = convert_state(id, 'abbrev');
+                        elem.click(function (e) {
+                            if (eArray.indexOf(id) === -1) {
+                                if (!config.convertStates) {
+                                    var stateName = convert_state(id, 'abbrev');
+                                }
+                                if (config.convertStates == 'name') {
+                                    var stateName = convert_state(id, 'name');
+                                }
+                                if (config.convertStates == 'nospaces') {
+                                    var stateName = convert_state(id, 'nospaces');
+                                }
+                                outPutHandler(stateName);
+                            } else {
+                                e.preventDefault();
                             }
-                            if (config.convertStates == 'name') {
-                                var stateName = convert_state(id, 'name');
-                            }
-                            if (config.convertStates == 'nospaces') {
-                                var stateName = convert_state(id, 'nospaces');
-                            }
-                            outPutHandler(stateName);
                         });
                     });
-                }
-                if (config.exceptions) {
-                    for (i in config.exceptions) {
-                        var exception = config.exceptions[i];
-                        console.log(exception);
-                        $(selector).find('#' + exception.state).off().click(function () {
-                            window.open(exception.link);
-                        });
-                    }
                 }
             });
             // show the world and assign click function
@@ -449,6 +471,18 @@
                     'name': 'Virgin Islands',
                     'abbrev': 'VI',
                     'region': '2'
+                }, {
+                    'name': 'East Asia',
+                    'abbrev': 'EA',
+                    'region': '9'
+                }, {
+                    'name': 'American Samoa',
+                    'abbrev': 'AS',
+                    'region': '9'
+                }, {
+                    'name': 'Europe',
+                    'abbrev': 'AE',
+                    'region': '3'
                 });
                 var output;
                 $.each(states, function (index, value) {
