@@ -78,12 +78,7 @@
                         });
                     });
                     world.click(function () {
-                        var win = window.open('https://aoprals.state.gov/content.asp?content_id=184&menu_id=78', '_blank');
-                        if (win) {
-                            win.focus();
-                        } else {
-                            alert('Please allow popups to allow a tab to open in a new window');
-                        }
+                        window.location.href = 'https://aoprals.state.gov/content.asp?content_id=184&menu_id=78';
                     });
                 }
                 if (config.topBoxes) {
@@ -92,23 +87,15 @@
                     // click functionality to be added underneath this
                     var allGroupLabelBoxes = Snap.selectAll('g > rect');
                     allGroupLabelBoxes.forEach(function (elem, i) {
-                        var topBoxes = ['AS', 'AE', 'EA'];
                         elem.hover(function () {
                             this.attr({
                                 fill: '#9bdaf9',
                                 cursor: 'pointer'
                             });
-                            $('svg').find('#topbox' + (topBoxes.indexOf(this.attr('id')) + 1)).attr({
-                                fill: '#000',
-                                stroke: 'none'
-                            });
                         }, function () {
                             this.attr({
                                 fill: '#c7c8c9',
                                 cursor: 'auto'
-                            });
-                            $('svg').find('#topbox' + (topBoxes.indexOf(this.attr('id')) + 1)).attr({
-                                fill: '#fff'
                             });
                         });
                     });
@@ -119,12 +106,9 @@
                 allPaths.forEach(function (elem, i) {
                     var id = elem.attr('id');
                     elem.hover(function () {
-                        $('svg').find('text:contains(' + id + ')').not('.topbox').attr({
-                            fill: '#000',
-                            stroke: 'none'
-                        });
                         this.attr({
-                            fill: '#9bdaf9'
+                            fill: '#9bdaf9',
+                            cursor: 'pointer'
                         });
                         if (this.selectAll('path').length > 1 && exceptions.indexOf(id) === -1) {
                             this.select('.statebox').attr({
@@ -132,9 +116,6 @@
                             });
                         }
                     }, function () {
-                        $('svg').find('text:contains(' + id + ')').not('.topbox').attr({
-                            fill: '#fff'
-                        });
                         this.attr({
                             fill: '#33a1d5'
                         });
@@ -147,8 +128,8 @@
                 });
                 // what do the clicks do??? read on!
                 function xCallback(i) {
-                    return function() {
-                        window.open(i);
+                    return function () {
+                        window.location.href = i;
                     }
                 }
                 if (config.exceptions) {
@@ -160,6 +141,9 @@
                         $(selector).find('#' + state).click(xCallback(link));
                         eArray.push(exception.state);
                     }
+                }
+                if (!config.exceptions) {
+                    var eArray = [];
                 }
                 if (config.mapTarget == 'link') {
                     var statePaths = Snap.selectAll('.state')
@@ -204,7 +188,6 @@
                     });
                 }
                 if (config.mapTarget == 'form') {
-                    var form = $('#' + config.mapForm);
                     var statePaths = Snap.selectAll('.state');
                     var topBoxPaths = Snap.selectAll('g > rect');
                     statePaths.forEach(function (elem, i) {
@@ -508,7 +491,7 @@
 
             function outPutHandler(x) {
                 if (config.mapTarget == 'link') {
-                    window.open(config.linkTemplate + x);
+                    window.location.href = config.linkTemplate + x;
                 }
                 if (config.mapTarget == 'form') {
                     $('#map_state').val(x);
