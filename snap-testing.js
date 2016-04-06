@@ -147,18 +147,18 @@
                 }
                 if (config.mapTarget == 'link') {
                     statePaths.forEach(function(elem, i) {
-                        cOutput(elem, i);
+                        cOutput(elem);
                     });
                     topBoxPaths.forEach(function(elem, i) {
-                        cOutput(elem, i);
+                        cOutput(elem);
                     });
                 }
                 if (config.mapTarget == 'form') {
                     statePaths.forEach(function(elem, i) {
-                        cOutput(elem, i);
+                        cOutput(elem);
                     });
                     topBoxPaths.forEach(function(elem, i) {
-                        cOutput(elem, i);
+                        cOutput(elem);
                     });
                 }
             });
@@ -421,7 +421,7 @@
                 return output;
             }
 
-            function cOutput(x, y) {
+            function cOutput(x) {
                 return function () {
                     var id = x.attr('id');
                     x.click(function (e) {
