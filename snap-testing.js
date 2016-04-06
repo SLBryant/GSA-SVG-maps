@@ -147,84 +147,12 @@
                     var eArray = [];
                 }
                 if (config.mapTarget == 'link') {
-                    statePaths.forEach(function (elem, i) {
-                        var id = elem.attr('id');
-                        elem.click(function (e) {
-                            if (eArray.indexOf(id) === -1) {
-                                if (!config.convertStates) {
-                                    var stateName = convert_state(id, 'abbrev');
-                                }
-                                if (config.convertStates == 'name') {
-                                    var stateName = convert_state(id, 'name');
-                                }
-                                if (config.convertStates == 'nospaces') {
-                                    var stateName = convert_state(id, 'nospaces');
-                                }
-                                outPutHandler(stateName);
-                            } else {
-                                e.preventDefault();
-                            }
-                        });
-                    });
-                    topBoxPaths.forEach(function (elem, i) {
-                        var id = elem.attr('id');
-                        elem.click(function (e) {
-                            if (eArray.indexOf(id) === -1) {
-                                if (!config.convertStates) {
-                                    var stateName = convert_state(id, 'abbrev');
-                                }
-                                if (config.convertStates == 'name') {
-                                    var stateName = convert_state(id, 'name');
-                                }
-                                if (config.convertStates == 'nospaces') {
-                                    var stateName = convert_state(id, 'nospaces');
-                                }
-                                outPutHandler(stateName);
-                            } else {
-                                e.preventDefault();
-                            }
-                        });
-                    });
+                    statePaths.forEach(cOutput(elem, i)));
+                    topBoxPaths.forEach(cOutput(elem, i));
                 }
                 if (config.mapTarget == 'form') {
-                    statePaths.forEach(function (elem, i) {
-                        var id = elem.attr('id');
-                        elem.click(function (e) {
-                            if (eArray.indexOf(id) === -1) {
-                                if (!config.convertStates) {
-                                    var stateName = convert_state(id, 'abbrev');
-                                }
-                                if (config.convertStates == 'name') {
-                                    var stateName = convert_state(id, 'name');
-                                }
-                                if (config.convertStates == 'nospaces') {
-                                    var stateName = convert_state(id, 'nospaces');
-                                }
-                                outPutHandler(stateName);
-                            } else {
-                                e.preventDefault();
-                            }
-                        });
-                    });
-                    topBoxPaths.forEach(function (elem, i) {
-                        var id = elem.attr('id');
-                        elem.click(function (e) {
-                            if (eArray.indexOf(id) === -1) {
-                                if (!config.convertStates) {
-                                    var stateName = convert_state(id, 'abbrev');
-                                }
-                                if (config.convertStates == 'name') {
-                                    var stateName = convert_state(id, 'name');
-                                }
-                                if (config.convertStates == 'nospaces') {
-                                    var stateName = convert_state(id, 'nospaces');
-                                }
-                                outPutHandler(stateName);
-                            } else {
-                                e.preventDefault();
-                            }
-                        });
-                    });
+                    statePaths.forEach(cOutput(elem, i)));
+                    topBoxPaths.forEach(cOutput(elem, i));
                 }
             });
             // show the world and assign click function
@@ -484,6 +412,28 @@
                 });
                 console.log('RETURN', output)
                 return output;
+            }
+
+            function cOutput(x, y) {
+                return function () {
+                    var id = x.attr('id');
+                    x.click(function (e) {
+                        if (eArray.indexOf(id) === -1) {
+                            if (!config.convertStates) {
+                                var stateName = convert_state(id, 'abbrev');
+                            }
+                            if (config.convertStates == 'name') {
+                                var stateName = convert_state(id, 'name');
+                            }
+                            if (config.convertStates == 'nospaces') {
+                                var stateName = convert_state(id, 'nospaces');
+                            }
+                            outPutHandler(stateName);
+                        } else {
+                            e.preventDefault();
+                        }
+                    });
+                }
             }
 
             function outPutHandler(x) {
