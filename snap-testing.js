@@ -83,6 +83,7 @@
                 }
                 var statePaths = Snap.selectAll('.state')
                 var topBoxPaths = Snap.selectAll('g > rect');
+                var pathsToProcess = [statePaths, topBoxPaths];
                 if (config.topBoxes) {
                     $('#topBoxes').show();
                     // assign hover functionality to American Samoa, Europe and East Asia
@@ -102,8 +103,8 @@
                     });
                 }
                 // create hover functionality for states
-                var exceptions = ['MI', 'VI', 'PR', 'GU'];
                 statePaths.forEach(function (elem, i) {
+                    var exceptions = ['MI', 'VI', 'PR', 'GU'];
                     var id = elem.attr('id');
                     elem.hover(function () {
                         this.attr({
@@ -145,22 +146,7 @@
                 if (!config.exceptions) {
                     var eArray = [];
                 }
-                if (config.mapTarget == 'link') {
-                    statePaths.forEach(function (elem, i) {
-                        cOutput(elem, eArray);
-                    });
-                    topBoxPaths.forEach(function (elem, i) {
-                        cOutput(elem, eArray);
-                    });
-                }
-                if (config.mapTarget == 'form') {
-                    statePaths.forEach(function (elem, i) {
-                        cOutput(elem, eArray);
-                    });
-                    topBoxPaths.forEach(function (elem, i) {
-                        cOutput(elem, eArray);
-                    });
-                }
+                targetApply(pathsToProcess, eArray);
             });
             // show the world and assign click function
             // CONVERT STATE
@@ -420,11 +406,19 @@
                 console.log('RETURN', output)
                 return output;
             }
+            
+            function targetApply(array, exceptionEls) {
+                for (i in array) {
+                    array[i].forEach(function(elem, i) {
+                        cOutput(elem, exceptionEls);
+                    });
+                }
+            }
 
-            function cOutput(x, y) {
-                var id = x.attr('id');
-                x.click(function (e) {
-                    if (y.indexOf(id) === -1) {
+            function cOutput(state, array) {
+                var id = state.attr('id');
+                state.click(function (e) {
+                    if (array.indexOf(id) === -1) {
                         if (!config.convertStates) {
                             var stateName = convert_state(id, 'abbrev');
                         }
@@ -441,12 +435,12 @@
                 });
             }
 
-            function outPutHandler(x) {
+            function outPutHandler(state) {
                 if (config.mapTarget == 'link') {
-                    window.location.href = config.linkTemplate + x;
+                    window.location.href = config.linkTemplate + state;
                 }
                 if (config.mapTarget == 'form') {
-                    $('#map_state').val(x);
+                    $('#map_state').val(state);
                     $('#' + config.mapForm).submit();
                 }
             }
