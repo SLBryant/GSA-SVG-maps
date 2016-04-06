@@ -87,8 +87,7 @@
                     $('#topBoxes').show();
                     // assign hover functionality to American Samoa, Europe and East Asia
                     // click functionality to be added underneath this
-                    var allGroupLabelBoxes = Snap.selectAll('g > rect');
-                    allGroupLabelBoxes.forEach(function (elem, i) {
+                    topBoxPaths.forEach(function (elem, i) {
                         elem.hover(function () {
                             this.attr({
                                 fill: '#9bdaf9',
@@ -147,12 +146,20 @@
                     var eArray = [];
                 }
                 if (config.mapTarget == 'link') {
-                    statePaths.forEach(cOutput(elem, i)));
-                    topBoxPaths.forEach(cOutput(elem, i));
+                    statePaths.forEach(function(elem, i) {
+                        cOutput(elem, i);
+                    });
+                    topBoxPaths.forEach(function(elem, i) {
+                        cOutput(elem, i);
+                    });
                 }
                 if (config.mapTarget == 'form') {
-                    statePaths.forEach(cOutput(elem, i)));
-                    topBoxPaths.forEach(cOutput(elem, i));
+                    statePaths.forEach(function(elem, i) {
+                        cOutput(elem, i);
+                    });
+                    topBoxPaths.forEach(function(elem, i) {
+                        cOutput(elem, i);
+                    });
                 }
             });
             // show the world and assign click function
