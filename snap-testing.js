@@ -146,19 +146,18 @@
                     var eArray = [];
                 }
                 if (config.mapTarget == 'link') {
-                    statePaths.forEach(function(elem, i) {
-                        console.log(eArray.indexOf(elem.attr('id')));
+                    statePaths.forEach(function (elem, i) {
                         cOutput(elem, eArray);
                     });
-                    topBoxPaths.forEach(function(elem, i) {
+                    topBoxPaths.forEach(function (elem, i) {
                         cOutput(elem, eArray);
                     });
                 }
                 if (config.mapTarget == 'form') {
-                    statePaths.forEach(function(elem, i) {
+                    statePaths.forEach(function (elem, i) {
                         cOutput(elem, eArray);
                     });
-                    topBoxPaths.forEach(function(elem, i) {
+                    topBoxPaths.forEach(function (elem, i) {
                         cOutput(elem, eArray);
                     });
                 }
@@ -423,25 +422,23 @@
             }
 
             function cOutput(x, y) {
-                return function () {
-                    var id = x.attr('id');
-                    x.click(function (e) {
-                        if (y.indexOf(id) === -1) {
-                            if (!config.convertStates) {
-                                var stateName = convert_state(id, 'abbrev');
-                            }
-                            if (config.convertStates == 'name') {
-                                var stateName = convert_state(id, 'name');
-                            }
-                            if (config.convertStates == 'nospaces') {
-                                var stateName = convert_state(id, 'nospaces');
-                            }
-                            outPutHandler(stateName);
-                        } else {
-                            e.preventDefault();
+                var id = x.attr('id');
+                x.click(function (e) {
+                    if (y.indexOf(id) === -1) {
+                        if (!config.convertStates) {
+                            var stateName = convert_state(id, 'abbrev');
                         }
-                    });
-                }
+                        if (config.convertStates == 'name') {
+                            var stateName = convert_state(id, 'name');
+                        }
+                        if (config.convertStates == 'nospaces') {
+                            var stateName = convert_state(id, 'nospaces');
+                        }
+                        outPutHandler(stateName);
+                    } else {
+                        e.preventDefault();
+                    }
+                });
             }
 
             function outPutHandler(x) {
