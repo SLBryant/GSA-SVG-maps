@@ -81,6 +81,8 @@
                         window.location.href = 'https://aoprals.state.gov/content.asp?content_id=184&menu_id=78';
                     });
                 }
+                var statePaths = Snap.selectAll('.state')
+                var topBoxPaths = Snap.selectAll('g > rect');
                 if (config.topBoxes) {
                     $('#topBoxes').show();
                     // assign hover functionality to American Samoa, Europe and East Asia
@@ -101,9 +103,8 @@
                     });
                 }
                 // create hover functionality for states
-                var allPaths = Snap.selectAll('.state');
                 var exceptions = ['MI', 'VI', 'PR', 'GU'];
-                allPaths.forEach(function (elem, i) {
+                statePaths.forEach(function (elem, i) {
                     var id = elem.attr('id');
                     elem.hover(function () {
                         this.attr({
@@ -146,8 +147,6 @@
                     var eArray = [];
                 }
                 if (config.mapTarget == 'link') {
-                    var statePaths = Snap.selectAll('.state')
-                    var topBoxPaths = Snap.selectAll('g > rect');
                     statePaths.forEach(function (elem, i) {
                         var id = elem.attr('id');
                         elem.click(function (e) {
@@ -188,8 +187,6 @@
                     });
                 }
                 if (config.mapTarget == 'form') {
-                    var statePaths = Snap.selectAll('.state');
-                    var topBoxPaths = Snap.selectAll('g > rect');
                     statePaths.forEach(function (elem, i) {
                         var id = elem.attr('id');
                         elem.click(function (e) {
