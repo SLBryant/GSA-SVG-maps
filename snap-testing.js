@@ -147,6 +147,7 @@
                 }
                 if (config.mapTarget == 'link') {
                     statePaths.forEach(function(elem, i) {
+                        console.log(eArray.indexOf(elem.attr('id')));
                         cOutput(elem, eArray);
                     });
                     topBoxPaths.forEach(function(elem, i) {
